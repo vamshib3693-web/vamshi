@@ -31,3 +31,4 @@ jobs:
         run: echo "The Secret is $MY_SECRET"
         env: 
           MY_SECRET: ${{ secrets.MY_SECRET }}
+          HLO
