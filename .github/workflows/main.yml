@@ -27,3 +27,7 @@ jobs:
 
       - name: Run simple Python command
         run: python -c "print('CI pipeline is working! From Vamshi')"
+      - name: Print secret (masked)
+        run: echo "The Secret is $MY_SECRET"
+        env: 
+          MY_SECRET: ${{ secrets.MY_SECRET }}
