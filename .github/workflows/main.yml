@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      APP_NAME: :VamshiApp"
+      DEPLOY_ENV: "dev"
 
     steps:
       - name: Checkout code
@@ -31,4 +34,8 @@ jobs:
         run: echo "The Secret is $MY_SECRET"
         env: 
           MY_SECRET: ${{ secrets.MY_SECRET }}
+      - name: Print environment variables
+          run: |
+            echo 'App name is: $APP_NAME"
+            echo "Deploying to environment: $DEPLOY_ENV"
           
