@@ -36,6 +36,6 @@ jobs:
           MY_SECRET: ${{ secrets.MY_SECRET }}
       - name: Print environment variables
           run: |
-            echo 'App name is: $APP_NAME"
-            echo "Deploying to environment: $DEPLOY_ENV"
+              echo 'App name is: $APP_NAME"
+              echo "Deploying to environment: $DEPLOY_ENV"
           
